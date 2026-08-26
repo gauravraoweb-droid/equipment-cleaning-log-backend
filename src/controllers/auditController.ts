@@ -3,7 +3,7 @@ import { prisma } from "../config/prisma.js";
 
 
 export const getAuditHistory = async (req: Request, res: Response) => {
-  const { recordId } = req.params;
+const { recordId } = req.params as { recordId: string }; 
   const audits = await prisma.audit.findMany({
     where: { recordId },
     orderBy: { changedAt: 'asc' },
