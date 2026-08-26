@@ -41,7 +41,7 @@ export const createRecord = async (req: Request, res: Response) => {
 
 
 export const updateRecord = async (req: Request, res: Response) => {
-  const { id } = req.params;
+const { id } = req.params as { id: string };
   const { cleanedBy, cleanedAt, method, notes, status } = req.body;
 
 
