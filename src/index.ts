@@ -13,7 +13,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "https://ibequipmentlogger.netlify.app/" || 'http://localhost:5173',
+    origin: "https://ibequipmentlogger.netlify.app/",
   })
 );
 app.use(express.json());
