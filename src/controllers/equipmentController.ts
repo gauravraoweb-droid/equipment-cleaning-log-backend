@@ -16,7 +16,7 @@ export const createEquipment = async (req: Request, res: Response) => {
 };
 
 export const updateEquipment = async (req: Request, res: Response) => {
-  const { id } = req.params;
+const { id } = req.params as { id: string };
   const { name, code, status } = req.body;
   const equipment = await prisma.equipment.update({
     where: { id },
@@ -26,7 +26,7 @@ export const updateEquipment = async (req: Request, res: Response) => {
 };
 
 export const deleteEquipment = async (req: Request, res: Response) => {
-  const { id } = req.params;
+const { id } = req.params as { id: string };
   await prisma.equipment.delete({ where: { id } });
   res.status(204).send();
 };
