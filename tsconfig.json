@@ -2,40 +2,21 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
-
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "target": "ES2022",
-
+    "module": "nodenext",
+    "target": "esnext",
     "types": ["node"],
-
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": false,
-
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
-
-  "include": [
-    "src/**/*.ts",
-    "generated/prisma/**/*.ts"
-  ],
-
-  "exclude": [
-    "node_modules",
-    "dist",
-    "prisma",
-    "tests",
-    "prisma7.config.ts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "generated", "prisma"]
 }
